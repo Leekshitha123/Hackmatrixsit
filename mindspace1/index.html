@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MindSpace 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌿 Welcome to MindSpace</h1>
+        <div class="card">
+            <h2>Create Your Profile</h2>
+
+            <!-- Name: letters only -->
+            <input type="text" id="name" placeholder="Enter Name"
+                oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+            <br><br>
+
+            <input type="number" id="age" placeholder="Enter Age"><br><br>
+
+            <button onclick="saveProfile()">Start Journey</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

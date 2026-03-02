@@ -1,0 +1,99 @@
+/* Global Background Animation */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+/* Smooth moving gradient */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main container */
+.container {
+    padding: 40px;
+}
+
+/* Glass effect card */
+.card {
+    margin: 30px auto;
+    padding: 30px;
+    width: 80%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+/* Hover animation */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Headings */
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+/* Audio player spacing */
+audio {
+    margin-top: 20px;
+}
+
+/* Truth or Dare Text */
+#gameText {
+    font-size: 20px;
+    margin-top: 20px;
+    min-height: 60px;
+    font-weight: 500;
+}
+
+/* Dropdown styling (if used) */
+select {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+}

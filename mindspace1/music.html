@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Relax Music – MindSpace</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 30px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        select,
+        button,
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        input[type="range"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>🎵 Relaxing Music</h2>
+
+        <select id="songSelect">
+            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                Calm Waves 🌊
+            </option>
+            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                Soft Piano 🎹
+            </option>
+            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                Nature Forest 🌳
+            </option>
+        </select>
+
+        <audio id="music"></audio>
+
+        <button onclick="playMusic()">▶ Play</button>
+        <button onclick="pauseMusic()">⏸ Pause</button>
+
+        <label>Volume</label>
+        <input type="range" min="0" max="1" step="0.1" value="1" oninput="setVolume(this.value)">
+    </div>
+
+    <script>
+        const music = document.getElementById("music");
+        const songSelect = document.getElementById("songSelect");
+
+        function playMusic() {
+            music.src = songSelect.value;
+            music.play();
+        }
+
+        function pauseMusic() {
+            music.pause();
+        }
+
+        function setVolume(val) {
+            music.volume = val;
+        }
+    </script>
+
+</body>
+
+</html>
